@@ -4,8 +4,6 @@ let hour = document.querySelector('.hours');
 let minute = document.querySelector('.minutes');
 let second = document.querySelector('.seconds')
 
-console.log(`dobro vece`);
-
 const displayTime = () => {
 
     let currTime = new Date();
@@ -13,16 +11,13 @@ const displayTime = () => {
     let minutes = currTime.getMinutes();
     let seconds = currTime.getSeconds();
 
-    if (hours<10) hours = '0'+hours;
-    if (minutes<10) minutes = '0'+minutes;
-    if (seconds<10) seconds = '0'+seconds;
-
+    (hours < 10) ? hours = '0' + hours : hours;
+    (minutes < 10) ? minutes = '0' + minutes : minutes;
+    (seconds < 10) ? seconds = '0' + seconds : seconds;
 
     hour.innerHTML = hours;
     minute.innerHTML = minutes;
     second.innerHTML = seconds;
-    
-    
 }
 
 displayTime();
